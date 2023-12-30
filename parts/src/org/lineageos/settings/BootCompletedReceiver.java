@@ -31,8 +31,6 @@ import org.lineageos.settings.display.ColorService;
 import org.lineageos.settings.dolby.DolbyUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.doze.PocketService;
-import org.lineageos.settings.refreshrate.RefreshUtils;
-import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
 
@@ -54,10 +52,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DolbyUtils.getInstance(context);
 
         DozeUtils.checkDozeService(context);
-        RefreshUtils.initialize(context);
-
-        // Thermal Profiles
-        ThermalUtils.startService(context);
+        
 
         // Pocket
         PocketService.startService(context);
