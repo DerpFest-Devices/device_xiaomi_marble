@@ -143,9 +143,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# BCR
-$(call inherit-product, vendor/bcr/bcr.mk)
-
 # Camera
 TARGET_CAMERA_USES_NEWER_HIDL_OVERRIDE_FORMAT := true
 TARGET_INCLUDES_MIUI_CAMERA := true
